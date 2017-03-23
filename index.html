@@ -11,21 +11,21 @@
 	<h1> Donations form </h1>
 	<form class="form-inline">
   		<div class="form-group">
-    		<label for="exampleInputEmail3"> Name </label>
-    			<input type="text" class="form-control" id="exampleInputEmail3" placeholder="Name">
+    		<label for="inputName"> Name </label>
+    			<input type="text" class="form-control" id="inputName" placeholder="Name">
   		</div>
   		<div class="form-group">
-    		<label  for="exampleInputPassword3"> Amount </label>
-    			<input type="text" class="form-control" id="exampleInputPassword3" placeholder="Amount">
+    		<label  for="inputAmount"> Amount </label>
+    			<input type="text" class="form-control" id="inputAmount" placeholder="Amount">
   		</div><br>
   		<label class="radio-inline">
-	  		<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Single amount
+	  		<input type="radio" name="inlineRadioOptions" id="inlineRadio1"> Single amount
 		</label>
 		<label class="radio-inline">
-	  		<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Per lap
+	  		<input type="radio" name="inlineRadioOptions" id="inlineRadio2"> Per lap
 		</label>  	
 	<div>
-		<table class="table table-bordered active">
+		<table class="table table-bordered active" id="myTable">
 		  <thead>
 		    <tr>
 		      <th class="col-xs-1">#</th>
@@ -33,17 +33,10 @@
 		      <th class="col-xs-5"> pledge</th>
 		    </tr>
 		  </thead>
-		  <tbody>
-		    <tr>
-		      <th scope="row">1</th>
-		      <td></td>
-		      <td></td>
-		    </tr>
-		  </tbody>
 		</table>
 	</div>
-	<button type="button" class="btn btn-primary">Donate</button>
-  	<button type="button" class="btn btn-default">Cancel</button>
+	<button type="button" class="btn btn-primary" id="donateBtn">Donate</button>
+  	<button type="button" class="btn btn-default" id="cancelBtn">Cancel</button>
 
 
 
@@ -53,5 +46,7 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="data.js"></script>
+	<script type="text/javascript" src="DOMHandler.js"></script>
 </body>
 </html>
