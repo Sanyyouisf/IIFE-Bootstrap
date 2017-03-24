@@ -17,6 +17,13 @@ var donation =(function (data){
  	data.getData= function(){
  		return customerData;
  	}
+ 	data.deleteData = function(name,amount,type){
+ 		var newData = { };
+ 		newData.name = "";
+ 		newData.amount = "";
+ 		newData.SingleAmount = "";
+ 		customerData.slice(newData);
+ 	}
  	
  	return data;
  }) ( donation ||{});
