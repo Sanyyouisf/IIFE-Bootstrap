@@ -18,6 +18,8 @@ Your project should have one HTML file that has:
 8. Make sure the donor array cannot be accessed by the other modules except through an accessor (getter) method.
 9. The IIFE should expose, in its public interface, a method named addDonor that accepts a single argument. That argument's value should be the user information object.
 You should also create an additional JavaScript file that handles interacting with the form elements and determining which method should be called.
+ 
+ ![Blog Screengrab](https://raw.githubusercontent.com/Sanyyouisf/IIFE-Bootstrap/master/bootstrap.png)
 
 ## Technologies
 
