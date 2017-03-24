@@ -20,12 +20,8 @@ donateBtn.addEventListener("click",function(event){
 
 //event listener for the cancel butoon  
 cancelBtn.addEventListener("click",function(event){
-    donation.deleteData(userName,amountData,typeData);
-    var donationArray = donation.getData();
-    printDOM(donationArray);
     clearForm(event);
     clearInput(event);
-    console.log("donationArray",donationArray);
 });
 
 //fuction to clear the text box every time you click donate .
