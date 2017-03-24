@@ -1,0 +1,15 @@
+body {
+	margin: 10px;
+	padding: 10px;
+	border: 1px #f0f8ff solid;
+	background-color: #f0f8ff;
+}
+
+.radio-inline {
+	margin: 10px;
+}
+
+
+/*#inlineRadio2, #inlineRadio1 {
+	margin: 10px;
+}*/
