@@ -4,12 +4,15 @@ var inputAmount = document.getElementById("inputAmount"); // textbox for amount
 var donateBtn = document.getElementById("donateBtn"); // Donate Button
 var cancelBtn = document.getElementById("cancelBtn"); // cancel button
 var myTable = document.getElementById("myTable"); //table
+var singleAmount = document.getElementById("inlineRadio1");
+var perlap = document.getElementById("inlineRadio2");  
 var userName ;
 var amountData;
+var typeData;
 
 //event listener for the donate butoon  
 donateBtn.addEventListener("click",function(event){
-    donation.addData(userName,amountData);
+    donation.addData(userName,amountData,typeData);
     var donationArray = donation.getData();
     printDOM(donationArray);
     clearInput(event);
@@ -19,6 +22,8 @@ donateBtn.addEventListener("click",function(event){
 function clearInput(event){
 	inputName.value="";
 	inputAmount.value="";
+	singleAmount.checked = false;
+	perlap.checked = false;
 }
 
 
@@ -30,16 +35,49 @@ function printDOM(ArraySaved){
 		row.insertCell(0).innerHTML= myTable.rows.length-1;
     	row.insertCell(1).innerHTML= ArraySaved[i].name;
     	row.insertCell(2).innerHTML= ArraySaved[i].amount;
+    	row.insertCell(3).innerHTML= ArraySaved[i].SingleAmount;
+    	console.log("ArraySaved",ArraySaved[i])
 	}
   };
 
 //event listener for the name input	
 inputName.addEventListener("keyup",function(event){
-	userName =event.target.value
+	userName =event.target.value;
 });
 
 
 //event listener for the amount
 inputAmount.addEventListener("keyup",function(event){
-	amountData =event.target.value
+	amountData = event.target.value;
 });
+
+//event lister for the singleAmount radio
+singleAmount.addEventListener("change",function(event){
+	console.log("radio check event ",event)
+	if (event.returnValue === true){
+		typeData = true;
+	}
+	// else {
+	// 	typeData = false;
+	// }
+});
+
+//event lister for the perlap radio
+perlap.addEventListener("change",function(event){
+	console.log("radio check event ",event)
+	if (event.returnValue === true){
+		typeData = false;
+	}
+	// else {
+	// 	typeData = true;
+	// }
+});
+
+
+
+
+
+
+
+
+

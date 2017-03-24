@@ -6,10 +6,11 @@ var donation =(function (data){
 
  	//function to add the data from the text input
  	// to creat an object and push this object to the private array (setter).
- 	data.addData = function(name,amount){
+ 	data.addData = function(name,amount,type){
  		var newData = { };
  		newData.name = name;
  		newData.amount = amount;
+ 		newData.SingleAmount = type;
  		customerData.push(newData);
  	}
 	//function return the array to the DOM(getter).
